@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Hilt Navigation Compose Factory Sample</string>
+
+    <string name="feature1">Feature 1</string>
+    <string name="feature2">Feature 2</string>
+</resources>
