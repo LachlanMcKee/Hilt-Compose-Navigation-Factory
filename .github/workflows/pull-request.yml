@@ -25,6 +25,7 @@ jobs:
 
       - uses: actions/setup-java@v2
         with:
+          distribution: 'zulu'
           java-version: 11.0.8
 
       - name: Cache Gradle packages
@@ -71,6 +72,7 @@ jobs:
 
       - uses: actions/setup-java@v2
         with:
+          distribution: 'zulu'
           java-version: 11.0.8
 
       - name: Cache Gradle packages
