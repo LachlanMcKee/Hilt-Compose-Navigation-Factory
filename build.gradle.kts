@@ -56,4 +56,15 @@ subprojects {
       )
     }
   }
+
+  configurations.all {
+    resolutionStrategy {
+      eachDependency {
+        when (requested.module.toString()) {
+          "androidx.compose.runtime:runtime" -> useVersion("1.0.0-beta06")
+          "androidx.compose.ui:ui" -> useVersion("1.0.0-beta06")
+        }
+      }
+    }
+  }
 }
