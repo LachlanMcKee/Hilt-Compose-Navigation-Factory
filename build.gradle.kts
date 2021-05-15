@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 buildscript {
   repositories {
     google()
-    jcenter()
+    mavenCentral()
   }
   dependencies {
     classpath("com.android.tools.build:gradle:7.0.0-alpha15")
@@ -17,7 +17,7 @@ buildscript {
 allprojects {
   repositories {
     google()
-    jcenter()
+    mavenCentral()
   }
 }
 
@@ -27,13 +27,13 @@ subprojects {
   buildscript {
     repositories {
       google()
-      jcenter()
+      mavenCentral()
     }
   }
 
   repositories {
     google()
-    jcenter()
+    mavenCentral()
   }
 
   pluginManager.withPlugin("java") {
