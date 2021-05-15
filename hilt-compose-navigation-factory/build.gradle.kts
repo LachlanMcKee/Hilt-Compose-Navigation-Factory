@@ -30,6 +30,6 @@ android {
 dependencies {
   implementation("androidx.navigation:navigation-compose:1.0.0-alpha10")
   implementation("androidx.hilt:hilt-navigation-compose:1.0.0-alpha01")
-  kapt("com.google.dagger:dagger-compiler:2.34")
-  kapt("com.google.dagger:hilt-compiler:2.34-beta")
+  kapt("com.google.dagger:dagger-compiler:2.35.1")
+  kapt("com.google.dagger:hilt-compiler:2.35.1")
 }

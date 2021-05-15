@@ -38,9 +38,9 @@ dependencies {
   implementation("androidx.hilt:hilt-navigation-compose:1.0.0-alpha01")
 
   // Dagger
-  implementation("com.google.dagger:dagger:2.34")
-  implementation("com.google.dagger:hilt-android:2.34-beta")
-  kapt("com.google.dagger:dagger-compiler:2.34")
-  kapt("com.google.dagger:hilt-compiler:2.34-beta")
+  implementation("com.google.dagger:dagger:2.35.1")
+  implementation("com.google.dagger:hilt-android:2.35.1")
+  kapt("com.google.dagger:dagger-compiler:2.35.1")
+  kapt("com.google.dagger:hilt-compiler:2.35.1")
   kapt(project(":hilt-compose-navigation-factory-compiler"))
 }
