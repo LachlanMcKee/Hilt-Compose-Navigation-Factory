@@ -12,7 +12,7 @@ java {
 
 @Suppress("AnnotationProcessorOnCompilePath")
 dependencies {
-  kapt("com.google.auto.service:auto-service:1.0")
-  implementation("com.google.auto.service:auto-service:1.0")
-  implementation("com.google.dagger:hilt-compiler:2.35.1")
+  kapt(libs.autoService)
+  implementation(libs.autoService)
+  implementation(libs.dagger.hilt.compiler)
 }

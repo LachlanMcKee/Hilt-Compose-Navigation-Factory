@@ -6,14 +6,14 @@ plugins {
 }
 
 android {
-  compileSdk = 30
+  compileSdk = libs.versions.compileSdk.get().toInt()
 
   defaultConfig {
-    minSdk = 21
-    targetSdk = 30
+    minSdk = libs.versions.minSdk.get().toInt()
+    targetSdk = libs.versions.targetSdk.get().toInt()
 
     applicationId = "net.lachlanmckee.jetpack.navigation.hilt"
-    versionCode = System.getenv("BITRISE_BUILD_NUMBER")?.toIntOrNull() ?: 1
+    versionCode = 1
     versionName = "0.0.1"
 
     testOptions {
@@ -29,7 +29,7 @@ android {
   }
 
   composeOptions {
-    kotlinCompilerExtensionVersion = "1.0.0-beta06"
+    kotlinCompilerExtensionVersion = libs.versions.compose.get()
   }
 
   buildTypes {
@@ -52,28 +52,23 @@ android {
 }
 
 dependencies {
-  implementation(project(":library"))
-  implementation(project(":sample:features:feature1"))
-  implementation(project(":sample:features:feature2"))
+  implementation(projects.library)
+  implementation(projects.sample.features.feature1)
+  implementation(projects.sample.features.feature2)
 
-  implementation("androidx.appcompat:appcompat:1.3.0-rc01")
-  implementation("androidx.activity:activity-compose:1.3.0-alpha07")
+  implementation(libs.androidx.appcompat)
+  implementation(libs.androidx.activityCompose)
 
-  implementation("androidx.compose.ui:ui:1.0.0-beta06")
-  implementation("androidx.compose.foundation:foundation:1.0.0-beta06")
-  implementation("androidx.compose.material:material:1.0.0-beta06")
+  implementation(libs.compose.ui)
+  implementation(libs.compose.foundation)
+  implementation(libs.compose.material)
 
   // Dagger
-  implementation("com.google.dagger:dagger:2.35.1")
-  implementation("com.google.dagger:hilt-android:2.35.1")
-  kapt("com.google.dagger:dagger-compiler:2.35.1")
-  kapt("com.google.dagger:hilt-compiler:2.35.1")
-  implementation("androidx.hilt:hilt-navigation-compose:1.0.0-alpha01")
+  implementation(libs.bundles.daggerRuntimes)
+  kapt(libs.bundles.daggerCompilers)
+  implementation(libs.dagger.hilt.navigationCompose)
 
-  androidTestUtil("androidx.test:orchestrator:1.3.0")
-  androidTestImplementation("androidx.test.ext:junit:1.1.2")
-  androidTestImplementation("androidx.test.espresso:espresso-core:3.3.0")
-  androidTestImplementation("androidx.test:runner:1.3.0")
-  androidTestImplementation("androidx.test:rules:1.3.0")
-  androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.0.0-beta06")
+  androidTestUtil(libs.espresso.orchestrator)
+  androidTestImplementation(libs.bundles.espressoCore)
+  androidTestImplementation(libs.compose.testing)
 }

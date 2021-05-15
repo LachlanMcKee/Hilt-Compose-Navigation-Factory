@@ -6,11 +6,17 @@ buildscript {
     mavenCentral()
   }
   dependencies {
-    classpath("com.android.tools.build:gradle:7.0.0-alpha15")
-    classpath(kotlin("gradle-plugin", version = "1.4.32"))
-    classpath("com.google.dagger:hilt-android-gradle-plugin:2.35.1")
-    classpath("com.vanniktech:gradle-maven-publish-plugin:0.15.1")
-    classpath("org.jetbrains.dokka:dokka-gradle-plugin:1.4.32")
+    // TODO: Once gradle adds support for accessing libs within build script, this can be removed.
+    val libs = project.extensions
+      .getByType<VersionCatalogsExtension>()
+      .named("libs") as org.gradle.accessors.dm.LibrariesForLibs
+
+    classpath(libs.plugin.androidTools)
+    classpath(kotlin("gradle-plugin", version = libs.versions.kotlin.get()))
+    classpath(libs.plugin.hiltAndroidGradle)
+    classpath(libs.plugin.hiltAndroidGradle)
+    classpath(libs.plugin.mavenPublish)
+    classpath(libs.plugin.dokka)
   }
 }
 
@@ -61,8 +67,8 @@ subprojects {
     resolutionStrategy {
       eachDependency {
         when (requested.module.toString()) {
-          "androidx.compose.runtime:runtime" -> useVersion("1.0.0-beta06")
-          "androidx.compose.ui:ui" -> useVersion("1.0.0-beta06")
+          "androidx.compose.runtime:runtime" -> useVersion(libs.versions.compose.get())
+          "androidx.compose.ui:ui" -> useVersion(libs.versions.compose.get())
         }
       }
     }

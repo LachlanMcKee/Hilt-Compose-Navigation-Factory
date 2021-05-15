@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-  compileSdk = 30
+  compileSdk = libs.versions.compileSdk.get().toInt()
 
   defaultConfig {
-    minSdk = 21
-    targetSdk = 30
+    minSdk = libs.versions.minSdk.get().toInt()
+    targetSdk = libs.versions.targetSdk.get().toInt()
   }
 
   buildFeatures {
@@ -23,14 +23,13 @@ android {
   }
 
   composeOptions {
-    kotlinCompilerExtensionVersion = "1.0.0-beta06"
+    kotlinCompilerExtensionVersion = libs.versions.compose.get()
   }
 }
 
 dependencies {
-  implementation("androidx.activity:activity-compose:1.3.0-alpha07")
-  implementation("androidx.navigation:navigation-compose:1.0.0-alpha10")
-  implementation("androidx.hilt:hilt-navigation-compose:1.0.0-alpha01")
-  kapt("com.google.dagger:dagger-compiler:2.35.1")
-  kapt("com.google.dagger:hilt-compiler:2.35.1")
+  implementation(libs.androidx.activityCompose)
+  implementation(libs.compose.navigation)
+  implementation(libs.dagger.hilt.navigationCompose)
+  kapt(libs.bundles.daggerCompilers)
 }
