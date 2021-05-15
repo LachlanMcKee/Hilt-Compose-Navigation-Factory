@@ -75,5 +75,5 @@ dependencies {
   androidTestImplementation("androidx.test.espresso:espresso-core:3.3.0")
   androidTestImplementation("androidx.test:runner:1.3.0")
   androidTestImplementation("androidx.test:rules:1.3.0")
-  androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.0.0-beta04")
+  androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.0.0-beta06")
 }
