@@ -61,7 +61,7 @@ dependencies {
 
   implementation("androidx.compose.ui:ui:1.0.0-beta04")
   implementation("androidx.compose.foundation:foundation:1.0.0-beta04")
-  implementation("androidx.compose.material:material:1.0.0-beta04")
+  implementation("androidx.compose.material:material:1.0.0-beta06")
 
   // Dagger
   implementation("com.google.dagger:dagger:2.34")
