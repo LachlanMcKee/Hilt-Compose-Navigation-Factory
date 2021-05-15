@@ -60,7 +60,7 @@ dependencies {
   implementation("androidx.activity:activity-compose:1.3.0-alpha06")
 
   implementation("androidx.compose.ui:ui:1.0.0-beta04")
-  implementation("androidx.compose.foundation:foundation:1.0.0-beta04")
+  implementation("androidx.compose.foundation:foundation:1.0.0-beta06")
   implementation("androidx.compose.material:material:1.0.0-beta06")
 
   // Dagger
