@@ -52,7 +52,7 @@ android {
 }
 
 dependencies {
-  implementation(project(":hilt-compose-navigation-factory"))
+  implementation(project(":library"))
   implementation(project(":sample:features:feature1"))
   implementation(project(":sample:features:feature2"))
 
