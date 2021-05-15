@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-  compileSdkVersion(30)
+  compileSdk = 30
 
   defaultConfig {
-    minSdkVersion(21)
-    targetSdkVersion(30)
+    minSdk = 21
+    targetSdk = 30
 
     applicationId = "net.lachlanmckee.jetpack.navigation.hilt"
     versionCode = System.getenv("BITRISE_BUILD_NUMBER")?.toIntOrNull() ?: 1
