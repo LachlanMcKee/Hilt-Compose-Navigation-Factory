@@ -1,7 +1,7 @@
-rootProject.name = "Hilt Compose Navigation Factory"
+rootProject.name = "HiltComposeNavigationFactory"
 include(
-  ":hilt-compose-navigation-factory",
-  ":hilt-compose-navigation-factory-compiler",
+  ":library",
+  ":compiler",
   ":sample:app",
   ":sample:features:feature1",
   ":sample:features:feature2"

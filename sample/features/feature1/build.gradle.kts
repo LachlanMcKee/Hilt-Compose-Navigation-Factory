@@ -27,7 +27,7 @@ android {
 }
 
 dependencies {
-  implementation(project(":hilt-compose-navigation-factory"))
+  implementation(project(":library"))
   implementation("androidx.compose.ui:ui:1.0.0-beta06")
   implementation("androidx.compose.foundation:foundation:1.0.0-beta06")
   implementation("androidx.compose.material:material:1.0.0-beta06")
@@ -42,5 +42,5 @@ dependencies {
   implementation("com.google.dagger:hilt-android:2.35.1")
   kapt("com.google.dagger:dagger-compiler:2.35.1")
   kapt("com.google.dagger:hilt-compiler:2.35.1")
-  kapt(project(":hilt-compose-navigation-factory-compiler"))
+  kapt(project(":compiler"))
 }
