@@ -1,13 +1,15 @@
 # Hilt Compose Navigation Factory
 
 A set of tools to move the responsibility of building a Compose navigation graph to factories that can be defined within other modules.
+
 By using this library in conjunction with Dagger Hilt these factories are combined into a `Set` which can then be used to construct the navigation graph via the `hiltNavGraphNavigationFactories` extension function.
 
-Here is how it works:
+## How to use
 
-1. You construct any number of `ComposeNavigationFactory` implementations in any modules.
+You construct any number of `ComposeNavigationFactory` implementations in any modules.
 
 ```kotlin
+// This annotation allows the annotation processor to add the ComposeNavigationFactory implementation to the dagger graph.
 @HiltComposeNavigationFactory
 internal class ExampleComposeNavigationFactory @Inject constructor() : ComposeNavigationFactory {
   override fun create(builder: NavGraphBuilder, navHostController: NavHostController) {
@@ -22,21 +24,17 @@ internal class ExampleComposeNavigationFactory @Inject constructor() : ComposeNa
     )
   }
 }
-```
 
-```kotlin
 @Composable
 internal fun ExampleComposable(viewModel: ExampleViewModel, navHostController: NavHostController) {
 }
-```
 
-```kotlin
 @HiltViewModel
 internal class ExampleViewModel @Inject constructor() : ViewModel() {
 }
 ```
 
-2. Within your Composable that hosts the navigation graph:
+Within the Composable that hosts the navigation graph you can access the `Set` of factories.
 
 ```kotlin
 @Composable
@@ -50,6 +48,8 @@ fun JetpackNavigationHiltApp() {
   }
 }
 ```
+
+To see this in practice, please take a look at the [sample](sample) directory.
 
 ## Download
 This library is available on Maven, you can add it to your project using the following gradle dependencies:
