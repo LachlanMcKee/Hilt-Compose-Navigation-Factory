@@ -2,7 +2,7 @@ package net.lachlanmckee.hilt.compose.navigation.factory
 
 import android.content.Context
 import androidx.compose.runtime.Composable
-import androidx.hilt.navigation.compose.hiltNavGraphViewModel
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.ViewModel
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavDeepLink
@@ -27,6 +27,6 @@ inline fun <reified VM> NavGraphBuilder.viewModelComposable(
 ) where VM : ViewModel {
 
   composable(route, arguments, deepLinks) { navBackStackEntry ->
-    content(hiltNavGraphViewModel(), navBackStackEntry)
+    content(hiltViewModel(), navBackStackEntry)
   }
 }
