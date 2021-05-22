@@ -14,7 +14,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.navigate
 import androidx.navigation.compose.rememberNavController
 import dagger.hilt.android.AndroidEntryPoint
 import net.lachlanmckee.hilt.compose.navigation.factory.addNavigationFactoriesNavigation
@@ -58,7 +57,7 @@ fun NavigationButton(navController: NavController, route: String, label: String)
     onClick = {
       navController.navigate(route) {
         launchSingleTop = true
-        popUpTo = "android-app://androidx.navigation.compose/feature1".hashCode()
+        popUpTo("feature1")
       }
     },
     content = {
