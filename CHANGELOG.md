@@ -1,6 +1,12 @@
 Change Log
 ===========
 
+Version 1.0.0-alpha04 *(2021-06-17)*
+----------------------------
+
+* Updated to Compose 1.0.0-beta-09
+* Updated to Dagger2 to 2.37
+
 Version 1.0.0-alpha03 *(2021-06-06)*
 ----------------------------
 
