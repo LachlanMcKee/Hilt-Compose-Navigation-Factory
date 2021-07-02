@@ -35,7 +35,7 @@ espresso-orchestrator = { module = "androidx.test:orchestrator", version.ref = "
 compose-testing = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "compose" }
 
 # Gradle plugins
-plugin-androidTools = "com.android.tools.build:gradle:7.0.0-beta03"
+plugin-androidTools = "com.android.tools.build:gradle:7.0.0-beta05"
 plugin-hiltAndroidGradle = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "dagger" }
 plugin-kotlinGradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 plugin-mavenPublish = "com.vanniktech:gradle-maven-publish-plugin:0.15.1"
