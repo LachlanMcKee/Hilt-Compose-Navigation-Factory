@@ -1,7 +1,12 @@
 Change Log
 ===========
 
-Version 1.0.0-alpha05 *(2021-07-01)*
+Version 1.0.0-rc02 *(2021-07-21)*
+----------------------------
+
+* Updated to Compose 1.0.0-rc-02
+
+Version 1.0.0-rc01 *(2021-07-01)*
 ----------------------------
 
 * Updated to Compose 1.0.0-rc-01
