@@ -7,11 +7,6 @@ buildscript {
     mavenCentral()
   }
   dependencies {
-    // TODO: Once gradle adds support for accessing libs within build script, this can be removed.
-    val libs = project.extensions
-      .getByType<VersionCatalogsExtension>()
-      .named("libs") as org.gradle.accessors.dm.LibrariesForLibs
-
     classpath(libs.plugin.androidTools)
     classpath(kotlin("gradle-plugin", version = libs.versions.kotlin.get()))
     classpath(libs.plugin.hiltAndroidGradle)
@@ -21,8 +16,8 @@ buildscript {
 }
 
 plugins {
-  id("com.diffplug.spotless") version "5.14.2"
-  id("com.github.ben-manes.versions") version "0.39.0"
+  alias(libs.plugins.spotless)
+  alias(libs.plugins.dependencyUpdates)
 }
 
 spotless {
