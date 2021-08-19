@@ -41,7 +41,7 @@ Within the Composable that hosts the navigation graph you can access the `Set` o
 fun JetpackNavigationHiltApp() {
   val navController = rememberNavController()
   val context = LocalContext.current
-  
+
   // The start destination would still need to be known at this point.
   NavHost(navController, startDestination = "example") {
     hiltNavGraphNavigationFactories(context).addNavigation(this, navController)
