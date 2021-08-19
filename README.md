@@ -55,6 +55,6 @@ To see this in practice, please take a look at the [sample](sample) directory.
 This library is available on Maven, you can add it to your project using the following gradle dependencies:
 
 ```gradle
-implementation 'net.lachlanmckee:hilt-compose-navigation-factory:1.0.0-rc02'
-annotationProcessor 'net.lachlanmckee:hilt-compose-navigation-factory-compiler:1.0.0-rc02'
+implementation 'net.lachlanmckee:hilt-compose-navigation-factory:1.0.1'
+annotationProcessor 'net.lachlanmckee:hilt-compose-navigation-factory-compiler:1.0.1'
 ```

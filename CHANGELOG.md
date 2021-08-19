@@ -1,6 +1,13 @@
 Change Log
 ===========
 
+Version 1.0.1 *(2021-08-19)*
+----------------------------
+
+* Updated to Compose 1.0.1
+* Updated to Dagger2 to 2.38.1
+* Updated to Kotlin to 1.5.21
+
 Version 1.0.0-rc02 *(2021-07-21)*
 ----------------------------
 
