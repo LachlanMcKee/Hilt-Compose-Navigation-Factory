@@ -37,13 +37,13 @@ fun JetpackNavigationHiltApp() {
   Scaffold(
     content = {
       val context = LocalContext.current
-      NavHost(navController, startDestination = "feature1") {
+      NavHost(navController, startDestination = PRIMARY_ROUTE) {
         addNavigationFactoriesNavigation(context, navController)
       }
     },
     bottomBar = {
       BottomAppBar {
-        NavigationButton(navController = navController, route = "feature1", label = "Feature 1")
+        NavigationButton(navController = navController, route = PRIMARY_ROUTE, label = "Feature 1")
         Spacer(Modifier.weight(1f, true))
         NavigationButton(navController = navController, route = "feature2", label = "Feature 2")
       }
@@ -55,9 +55,11 @@ fun JetpackNavigationHiltApp() {
 fun NavigationButton(navController: NavController, route: String, label: String) {
   TextButton(
     onClick = {
-      navController.navigate(route) {
-        launchSingleTop = true
-        popUpTo("feature1")
+      navController.popBackStack(route = PRIMARY_ROUTE, inclusive = false)
+      if (route != PRIMARY_ROUTE) {
+        navController.navigate(route) {
+          launchSingleTop = true
+        }
       }
     },
     content = {
@@ -65,3 +67,5 @@ fun NavigationButton(navController: NavController, route: String, label: String)
     }
   )
 }
+
+private const val PRIMARY_ROUTE = "feature1"
