@@ -10,9 +10,11 @@ java {
   targetCompatibility = JavaVersion.VERSION_1_8
 }
 
-@Suppress("AnnotationProcessorOnCompilePath")
 dependencies {
-  kapt(libs.autoService)
-  implementation(libs.autoService)
-  implementation(libs.dagger.hilt.compiler)
+  implementation(libs.javapoet)
+  implementation(libs.auto.common)
+  compileOnly(libs.auto.service.annotations)
+  kapt(libs.auto.service.compiler)
+  compileOnly(libs.incap.core)
+  kapt(libs.incap.compiler)
 }
