@@ -1,6 +1,12 @@
 Change Log
 ===========
 
+Version 1.0.2 *(2021-08-19)*
+----------------------------
+
+* Updated to Compose 1.0.2
+* Simplified compiler implementation and more closely aligned with Dagger Hilt extensions specification.
+
 Version 1.0.1 *(2021-08-19)*
 ----------------------------
 
