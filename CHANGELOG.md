@@ -1,7 +1,13 @@
 Change Log
 ===========
 
-Version 1.0.2 *(2021-08-19)*
+Version 1.0.3 *(2021-10-02)*
+----------------------------
+
+* Updated to Compose 1.0.3
+* Updated to Kotlin 1.5.30
+
+Version 1.0.2 *(2021-09-26)*
 ----------------------------
 
 * Updated to Compose 1.0.2

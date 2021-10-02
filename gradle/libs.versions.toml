@@ -1,7 +1,7 @@
 [versions]
-compose = "1.0.2"
-dagger = "2.38.1"
-kotlin = "1.5.21"
+compose = "1.0.3"
+dagger = "2.39.1"
+kotlin = "1.5.30"
 autoService = "1.0"
 incap = "0.3"
 javapoet = "1.13.0"
@@ -26,7 +26,7 @@ compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
 compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
 compose-material = { module = "androidx.compose.material:material", version.ref = "compose" }
 compose-runtime-livedata = { module = "androidx.compose.runtime:runtime-livedata", version.ref = "compose" }
-compose-navigation = "androidx.navigation:navigation-compose:2.4.0-alpha09"
+compose-navigation = "androidx.navigation:navigation-compose:2.4.0-alpha10"
 
 dagger-runtime = { module = "com.google.dagger:dagger", version.ref = "dagger" }
 dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "dagger" }
@@ -52,8 +52,8 @@ compose-testing = { module = "androidx.compose.ui:ui-test-junit4", version.ref =
 plugin-androidTools = "com.android.tools.build:gradle:7.0.2"
 plugin-hiltAndroidGradle = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "dagger" }
 plugin-kotlinGradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
-plugin-mavenPublish = "com.vanniktech:gradle-maven-publish-plugin:0.17.0"
-plugin-dokka = "org.jetbrains.dokka:dokka-gradle-plugin:1.5.0"
+plugin-mavenPublish = "com.vanniktech:gradle-maven-publish-plugin:0.18.0"
+plugin-dokka = "org.jetbrains.dokka:dokka-gradle-plugin:1.5.30"
 
 [bundles]
 daggerRuntimes = ["dagger-runtime", "dagger-hilt-runtime"]
