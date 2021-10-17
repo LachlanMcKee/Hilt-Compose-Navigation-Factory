@@ -1,7 +1,7 @@
 [versions]
-compose = "1.0.3"
+compose = "1.0.4"
 dagger = "2.39.1"
-kotlin = "1.5.30"
+kotlin = "1.5.31"
 autoService = "1.0"
 incap = "0.3"
 javapoet = "1.13.0"
@@ -10,7 +10,7 @@ androidXTest = "1.4.0"
 compileSdk = "31"
 minSdk = "21"
 targetSdk = "30"
-spotless = "5.14.2"
+spotless = "5.17.0"
 dependencyUpdates = "0.39.0"
 
 [plugins]
@@ -37,7 +37,7 @@ dagger-hilt-navigationCompose = "androidx.hilt:hilt-navigation-compose:1.0.0-alp
 incap-compiler = { module = "net.ltgt.gradle.incap:incap-processor", version.ref = "incap" }
 incap-core = { module = "net.ltgt.gradle.incap:incap", version.ref = "incap" }
 javapoet = { module = "com.squareup:javapoet", version.ref = "javapoet" }
-auto-common = "com.google.auto:auto-common:1.1.2"
+auto-common = "com.google.auto:auto-common:1.2"
 auto-service-annotations = { module = "com.google.auto.service:auto-service-annotations", version.ref = "autoService" }
 auto-service-compiler = { module = "com.google.auto.service:auto-service", version.ref = "autoService" }
 
@@ -49,11 +49,11 @@ espresso-orchestrator = { module = "androidx.test:orchestrator", version.ref = "
 compose-testing = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "compose" }
 
 # Gradle plugins
-plugin-androidTools = "com.android.tools.build:gradle:7.0.2"
+plugin-androidTools = "com.android.tools.build:gradle:7.0.3"
 plugin-hiltAndroidGradle = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "dagger" }
 plugin-kotlinGradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 plugin-mavenPublish = "com.vanniktech:gradle-maven-publish-plugin:0.18.0"
-plugin-dokka = "org.jetbrains.dokka:dokka-gradle-plugin:1.5.30"
+plugin-dokka = "org.jetbrains.dokka:dokka-gradle-plugin:1.5.31"
 
 [bundles]
 daggerRuntimes = ["dagger-runtime", "dagger-hilt-runtime"]
