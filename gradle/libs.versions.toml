@@ -1,7 +1,7 @@
 [versions]
-compose = "1.1.0-rc01"
-composeCompiler = "1.1.0-rc02"
-dagger = "2.40.5"
+compose = "1.1.0"
+composeCompiler = "1.1.0"
+dagger = "2.41"
 kotlin = "1.6.10"
 autoService = "1.0.1"
 incap = "0.3"
@@ -11,8 +11,8 @@ androidXTest = "1.4.0"
 compileSdk = "31"
 minSdk = "21"
 targetSdk = "30"
-spotless = "6.2.0"
-dependencyUpdates = "0.41.0"
+spotless = "6.3.0"
+dependencyUpdates = "0.42.0"
 
 [plugins]
 spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
@@ -21,19 +21,19 @@ dependencyUpdates = { id = "com.github.ben-manes.versions", version.ref = "depen
 [libraries]
 androidx-activityCompose = "androidx.activity:activity-compose:1.4.0"
 androidx-appcompat = "androidx.appcompat:appcompat:1.4.1"
-androidx-lifecycle-livedata = "androidx.lifecycle:lifecycle-livedata-ktx:2.4.0"
+androidx-lifecycle-livedata = "androidx.lifecycle:lifecycle-livedata-ktx:2.4.1"
 
 compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
 compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
 compose-material = { module = "androidx.compose.material:material", version.ref = "compose" }
 compose-runtime-livedata = { module = "androidx.compose.runtime:runtime-livedata", version.ref = "compose" }
-compose-navigation = "androidx.navigation:navigation-compose:2.4.0-rc01"
+compose-navigation = "androidx.navigation:navigation-compose:2.4.1"
 
 dagger-runtime = { module = "com.google.dagger:dagger", version.ref = "dagger" }
 dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "dagger" }
 dagger-hilt-runtime = { module = "com.google.dagger:hilt-android", version.ref = "dagger" }
 dagger-hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "dagger" }
-dagger-hilt-navigationCompose = "androidx.hilt:hilt-navigation-compose:1.0.0-rc01"
+dagger-hilt-navigationCompose = "androidx.hilt:hilt-navigation-compose:1.0.0"
 
 incap-compiler = { module = "net.ltgt.gradle.incap:incap-processor", version.ref = "incap" }
 incap-core = { module = "net.ltgt.gradle.incap:incap", version.ref = "incap" }
@@ -50,7 +50,7 @@ espresso-orchestrator = "androidx.test:orchestrator:1.4.1"
 compose-testing = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "compose" }
 
 # Gradle plugins
-plugin-androidTools = "com.android.tools.build:gradle:7.0.4"
+plugin-androidTools = "com.android.tools.build:gradle:7.1.1"
 plugin-hiltAndroidGradle = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "dagger" }
 plugin-kotlinGradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 plugin-mavenPublish = "com.vanniktech:gradle-maven-publish-plugin:0.18.0"
