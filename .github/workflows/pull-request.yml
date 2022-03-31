@@ -30,7 +30,7 @@ jobs:
           java-version: 11.0.8
 
       - name: Cache Gradle packages
-        uses: actions/cache@v2
+        uses: actions/cache@v3.0.1
         with:
           path: |
             ~/.gradle/caches
@@ -71,7 +71,7 @@ jobs:
           java-version: 11.0.8
 
       - name: Cache Gradle packages
-        uses: actions/cache@v2
+        uses: actions/cache@v3.0.1
         with:
           path: |
             ~/.gradle/caches
@@ -81,7 +81,7 @@ jobs:
             ${{ runner.os }}-gradle-
 
       - name: AVD cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3.0.1
         id: avd-cache
         with:
           path: |
