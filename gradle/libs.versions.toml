@@ -54,7 +54,7 @@ plugin-androidTools = "com.android.tools.build:gradle:7.2.2"
 plugin-hiltAndroidGradle = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "dagger" }
 plugin-kotlinGradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 plugin-mavenPublish = "com.vanniktech:gradle-maven-publish-plugin:0.18.0"
-plugin-dokka = "org.jetbrains.dokka:dokka-gradle-plugin:1.5.31"
+plugin-dokka = "org.jetbrains.dokka:dokka-gradle-plugin:1.7.10"
 
 [bundles]
 daggerRuntimes = ["dagger-runtime", "dagger-hilt-runtime"]
