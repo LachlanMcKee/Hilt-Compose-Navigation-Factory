@@ -11,7 +11,6 @@ buildscript {
     classpath(kotlin("gradle-plugin", version = libs.versions.kotlin.get()))
     classpath(libs.plugin.hiltAndroidGradle)
     classpath(libs.plugin.mavenPublish)
-    classpath(libs.plugin.dokka)
   }
 }
 
