@@ -25,7 +25,6 @@ inline fun <reified VM> NavGraphBuilder.viewModelComposable(
   deepLinks: List<NavDeepLink> = emptyList(),
   crossinline content: @Composable VM.(NavBackStackEntry) -> Unit
 ) where VM : ViewModel {
-
   composable(route, arguments, deepLinks) { navBackStackEntry ->
     content(hiltViewModel(), navBackStackEntry)
   }
