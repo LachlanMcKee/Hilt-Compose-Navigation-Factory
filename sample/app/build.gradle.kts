@@ -6,6 +6,7 @@ plugins {
 }
 
 android {
+  namespace = "net.lachlanmckee.hilt.compose.navigation.factory.app"
   compileSdk = libs.versions.compileSdk.get().toInt()
 
   defaultConfig {
@@ -26,6 +27,11 @@ android {
 
   buildFeatures {
     compose = true
+  }
+
+  compileOptions {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
   }
 
   composeOptions {
