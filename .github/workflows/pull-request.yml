@@ -77,8 +77,22 @@ jobs:
             ${{ runner.os }}-gradle-
 
       - name: PublishToMavenLocal
-        run: ./gradlew publishToMavenLocal
-        working-directory: .
+        run: |
+          echo "Create .gpg key"
+          echo $GPG_KEY_ARMOR | base64 --decode > ./release.asc
+          gpg --quiet --output $GITHUB_WORKSPACE/release.gpg --dearmor ./release.asc
+          sed -i -e "s,mavenCentralUsername=,mavenCentralUsername=$SONATYPE_USERNAME,g" gradle.properties
+          sed -i -e "s,mavenCentralPassword=,mavenCentralPassword=$SONATYPE_PASSWORD,g" gradle.properties
+          sed -i -e "s,signing.keyId=,signing.keyId=$GPG_KEY_ID,g" gradle.properties
+          sed -i -e "s,signing.password=,signing.password=$GPG_PASSWORD,g" gradle.properties
+          sed -i -e "s,signing.secretKeyRingFile=,signing.secretKeyRingFile=$GITHUB_WORKSPACE/release.gpg,g" gradle.properties
+          ./gradlew publishToMavenLocal --no-daemon --no-parallel
+        env:
+          GPG_KEY_ARMOR: "${{ secrets.GPG_KEY_ARMOR }}"
+          GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
+          GPG_PASSWORD: ${{ secrets.GPG_KEY_PASSWORD }}
+          SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
+          SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
 
       - name: Cleanup Gradle Cache
         run: |
