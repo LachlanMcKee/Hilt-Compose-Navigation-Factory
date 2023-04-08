@@ -30,7 +30,9 @@ spotless {
     ktlint().editorConfigOverride(
       mapOf(
         "indent_size" to "2",
-        "disabled_rules" to "no-wildcard-imports"
+        "disabled_rules" to "no-wildcard-imports",
+        "ij_kotlin_allow_trailing_comma" to "false",
+        "ij_kotlin_allow_trailing_comma_on_call_site" to "false"
       )
     )
     target("**/*.kt")
@@ -39,7 +41,13 @@ spotless {
     targetExclude("**/build/**", "**/GeneratedLibraries.kt")
   }
   kotlinGradle {
-    ktlint().editorConfigOverride(mapOf("indent_size" to "2"))
+    ktlint().editorConfigOverride(
+      mapOf(
+        "indent_size" to "2",
+        "ij_kotlin_allow_trailing_comma" to "false",
+        "ij_kotlin_allow_trailing_comma_on_call_site" to "false"
+      )
+    )
     target("**/*.gradle.kts")
     trimTrailingWhitespace()
     endWithNewline()

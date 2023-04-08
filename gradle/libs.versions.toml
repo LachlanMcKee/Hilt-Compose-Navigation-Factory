@@ -11,7 +11,7 @@ androidXTest = "1.4.0"
 compileSdk = "33"
 minSdk = "21"
 targetSdk = "33"
-spotless = "6.10.0"
+spotless = "6.18.0"
 dependencyUpdates = "0.46.0"
 
 [plugins]
