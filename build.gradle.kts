@@ -96,14 +96,14 @@ subprojects {
 
   pluginManager.withPlugin("java") {
     configure<JavaPluginExtension> {
-      sourceCompatibility = JavaVersion.VERSION_1_8
-      targetCompatibility = JavaVersion.VERSION_1_8
+      sourceCompatibility = JavaVersion.VERSION_17
+      targetCompatibility = JavaVersion.VERSION_17
     }
   }
 
   tasks.withType<KotlinCompile>().configureEach {
     kotlinOptions {
-      jvmTarget = "1.8"
+      jvmTarget = "17"
       freeCompilerArgs = freeCompilerArgs + listOf(
         "-Xopt-in=kotlin.ExperimentalStdlibApi",
         "-Xopt-in=kotlin.RequiresOptIn",

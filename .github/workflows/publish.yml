@@ -16,7 +16,7 @@ jobs:
       - uses: actions/setup-java@v3
         with:
           distribution: 'zulu'
-          java-version: 11.0.8
+          java-version: 17
 
       - name: Upload Artifacts
         run: |
