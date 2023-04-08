@@ -46,7 +46,7 @@ auto-service-compiler = { module = "com.google.auto.service:auto-service", versi
 espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espresso" }
 espresso-runner = { module = "androidx.test:runner", version.ref = "androidXTest" }
 espresso-rules = { module = "androidx.test:rules", version.ref = "androidXTest" }
-espresso-orchestrator = "androidx.test:orchestrator:1.4.1"
+espresso-orchestrator = "androidx.test:orchestrator:1.4.2"
 compose-testing = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "compose" }
 
 # Gradle plugins
