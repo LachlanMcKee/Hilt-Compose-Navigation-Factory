@@ -21,7 +21,7 @@ dependencyUpdates = { id = "com.github.ben-manes.versions", version.ref = "depen
 [libraries]
 androidx-activityCompose = "androidx.activity:activity-compose:1.7.0"
 androidx-appcompat = "androidx.appcompat:appcompat:1.6.1"
-androidx-lifecycle-livedata = "androidx.lifecycle:lifecycle-livedata-ktx:2.5.1"
+androidx-lifecycle-livedata = "androidx.lifecycle:lifecycle-livedata-ktx:2.6.1"
 
 compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
 compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
