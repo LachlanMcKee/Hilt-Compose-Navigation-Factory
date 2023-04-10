@@ -29,7 +29,7 @@ fun hiltNavGraphNavigationFactories(context: Context): Set<ComposeNavigationFact
       }
       ctx = ctx.baseContext
     }
-    throw IllegalStateException(
+    error(
       "Expected an activity context for accessing ComposeNavigationFactoryEntryPoint but instead found: $ctx"
     )
   }

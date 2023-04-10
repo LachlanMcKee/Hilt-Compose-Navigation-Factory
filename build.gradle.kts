@@ -15,6 +15,7 @@ buildscript {
 
 plugins {
   alias(libs.plugins.spotless)
+  alias(libs.plugins.detekt)
 }
 
 spotless {

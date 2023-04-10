@@ -2,6 +2,11 @@ plugins {
   id("com.android.library")
   id("org.jetbrains.kotlin.android")
   id("org.jetbrains.kotlin.kapt")
+  id("io.gitlab.arturbosch.detekt")
+}
+
+detekt {
+  config = files("$rootDir/detekt.yml")
 }
 
 android {
