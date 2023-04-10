@@ -3,6 +3,11 @@ plugins {
   id("org.jetbrains.kotlin.android")
   id("org.jetbrains.kotlin.kapt")
   id("dagger.hilt.android.plugin")
+  id("io.gitlab.arturbosch.detekt")
+}
+
+detekt {
+  config = files("$rootDir/detekt.yml")
 }
 
 android {

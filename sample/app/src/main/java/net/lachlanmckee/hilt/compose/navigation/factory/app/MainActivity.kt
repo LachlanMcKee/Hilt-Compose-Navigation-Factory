@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.BottomAppBar
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
@@ -35,9 +36,13 @@ fun JetpackNavigationHiltApp() {
   val navController = rememberNavController()
 
   Scaffold(
-    content = {
+    content = { padding ->
       val context = LocalContext.current
-      NavHost(navController, startDestination = PRIMARY_ROUTE) {
+      NavHost(
+        modifier = Modifier.padding(padding),
+        navController = navController,
+        startDestination = PRIMARY_ROUTE
+      ) {
         addNavigationFactoriesNavigation(context, navController)
       }
     },
