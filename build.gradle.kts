@@ -1,4 +1,3 @@
-import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 buildscript {
@@ -16,7 +15,6 @@ buildscript {
 
 plugins {
   alias(libs.plugins.spotless)
-  alias(libs.plugins.dependencyUpdates)
 }
 
 spotless {
@@ -52,23 +50,6 @@ spotless {
     trimTrailingWhitespace()
     endWithNewline()
     targetExclude("**/build/**")
-  }
-}
-
-fun isStable(version: String): Boolean {
-  val stableKeyword = listOf("RELEASE", "FINAL", "GA").any { version.toUpperCase().contains(it) }
-  val regex = "^[0-9,.v-]+(-r)?$".toRegex()
-  val isStable = stableKeyword || regex.matches(version)
-  return isStable
-}
-
-tasks.named("dependencyUpdates", DependencyUpdatesTask::class.java) {
-  rejectVersionIf {
-    if (isStable(currentVersion)) {
-      !isStable(candidate.version)
-    } else {
-      false
-    }
   }
 }
 
