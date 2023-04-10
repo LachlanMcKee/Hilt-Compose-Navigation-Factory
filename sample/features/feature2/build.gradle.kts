@@ -33,7 +33,7 @@ android {
 }
 
 dependencies {
-  implementation(projects.library)
+  api(projects.library)
   implementation(libs.compose.ui)
   implementation(libs.compose.foundation)
   implementation(libs.compose.material)
@@ -43,7 +43,8 @@ dependencies {
   implementation(libs.dagger.hilt.navigationCompose)
 
   // Dagger
-  implementation(libs.bundles.daggerRuntimes)
+  api(libs.dagger.runtime)
+  implementation(libs.dagger.hilt.runtime)
   kapt(libs.bundles.daggerCompilers)
   kapt(projects.compiler)
 }

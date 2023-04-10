@@ -77,7 +77,7 @@ jobs:
             ${{ runner.os }}-gradle-
 
       - name: Build
-        run: ./gradlew build detekt
+        run: ./gradlew build detekt projectHealth
         working-directory: .
 
       - name: Cleanup Gradle Cache

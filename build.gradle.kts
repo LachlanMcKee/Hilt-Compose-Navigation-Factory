@@ -16,6 +16,7 @@ buildscript {
 plugins {
   alias(libs.plugins.spotless)
   alias(libs.plugins.detekt)
+  id("com.autonomousapps.dependency-analysis") version libs.versions.dependencyAnalysis.get()
 }
 
 spotless {
@@ -51,6 +52,32 @@ spotless {
     trimTrailingWhitespace()
     endWithNewline()
     targetExclude("**/build/**")
+  }
+}
+
+dependencyAnalysis {
+  issues {
+    all {
+      onIncorrectConfiguration {
+        severity("fail")
+      }
+      onUnusedDependencies {
+        severity("fail")
+      }
+    }
+    project(":sample:app") {
+      onUnusedDependencies {
+        severity("fail")
+
+        // These are used by the hilt compiler plugin
+        exclude(
+          "androidx.hilt:hilt-navigation-compose",
+          "com.google.dagger:dagger",
+          ":sample:features:feature1",
+          ":sample:features:feature2"
+        )
+      }
+    }
   }
 }
 
