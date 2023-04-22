@@ -200,6 +200,7 @@ jobs:
           disable-animations: true
           script: |
             adb logcat > logcat.out &
+            adb uninstall net.lachlanmckee.jetpack.navigation.hilt.debug.test &
             ./gradlew connectedCheck --stacktrace
 
       - name: Upload instrumentation test reports
