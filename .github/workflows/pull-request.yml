@@ -77,7 +77,9 @@ jobs:
             ${{ runner.os }}-gradle-
 
       - name: Build
-        run: ./gradlew build detekt projectHealth
+# https://github.com/autonomousapps/dependency-analysis-android-gradle-plugin/issues/884
+# run: ./gradlew build detekt projectHealth
+        run: ./gradlew build detekt
         working-directory: .
 
       - name: Cleanup Gradle Cache
