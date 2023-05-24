@@ -19,7 +19,7 @@ spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 
 [libraries]
-androidx-activityCompose = "androidx.activity:activity-compose:1.7.1"
+androidx-activityCompose = "androidx.activity:activity-compose:1.7.2"
 androidx-appcompat = "androidx.appcompat:appcompat:1.6.1"
 androidx-lifecycle-livedata = "androidx.lifecycle:lifecycle-livedata-ktx:2.6.1"
 
