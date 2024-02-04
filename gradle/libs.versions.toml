@@ -10,7 +10,7 @@ espresso = "3.5.1"
 compileSdk = "33"
 minSdk = "21"
 targetSdk = "33"
-spotless = "6.18.0"
+spotless = "6.25.0"
 detekt = "1.22.0"
 dependencyAnalysis = "1.13.1"
 
