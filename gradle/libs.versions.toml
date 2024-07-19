@@ -2,7 +2,7 @@
 compose = "1.4.3"
 composeCompiler = "1.4.7"
 dagger = "2.46"
-kotlin = "1.8.21"
+kotlin = "1.9.25"
 autoService = "1.0.1"
 incap = "1.0.0"
 javapoet = "1.13.0"
