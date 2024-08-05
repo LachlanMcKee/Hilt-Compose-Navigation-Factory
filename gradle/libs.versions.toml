@@ -1,7 +1,7 @@
 [versions]
 compose = "1.4.3"
 composeCompiler = "1.4.7"
-dagger = "2.46"
+dagger = "2.52"
 kotlin = "1.8.21"
 autoService = "1.0.1"
 incap = "1.0.0"
