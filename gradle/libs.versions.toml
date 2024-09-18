@@ -21,7 +21,7 @@ detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 [libraries]
 androidx-activityCompose = "androidx.activity:activity-compose:1.7.1"
 androidx-appcompat = "androidx.appcompat:appcompat:1.6.1"
-androidx-lifecycle-livedata = "androidx.lifecycle:lifecycle-livedata-ktx:2.6.1"
+androidx-lifecycle-livedata = "androidx.lifecycle:lifecycle-livedata-ktx:2.8.6"
 
 compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
 compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
